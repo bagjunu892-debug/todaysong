@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self'; script-src 'self'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 노래</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <!-- 시작 화면 -->
+      <section id="screen-start" class="screen active">
+        <div class="emoji-big">🎵</div>
+        <h1>오늘의 노래</h1>
+        <p class="sub">질문 5개에 답하면<br />100곡 중 오늘의 한 곡을 골라드려요</p>
+        <button id="btn-start" class="btn primary">시작하기</button>
+      </section>
+
+      <!-- 질문 화면 -->
+      <section id="screen-question" class="screen">
+        <div class="progress"><div id="progress-bar" class="progress-bar"></div></div>
+        <p id="step-label" class="step-label"></p>
+        <h2 id="question-text"></h2>
+        <div id="options" class="options"></div>
+        <p id="remaining" class="remaining"></p>
+      </section>
+
+      <!-- 결과 화면 -->
+      <section id="screen-result" class="screen">
+        <p class="result-caption">오늘의 노래는</p>
+        <div class="emoji-big">💿</div>
+        <h2 id="result-title"></h2>
+        <p id="result-artist" class="result-artist"></p>
+        <div id="result-tags" class="tags"></div>
+        <a id="result-link" class="btn primary" href="#" target="_blank" rel="noopener">유튜브에서 듣기</a>
+        <button id="btn-restart" class="btn ghost">다시 하기</button>
+      </section>
+    </main>
+
+    <script src="songs.js"></script>
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
